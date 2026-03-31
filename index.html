@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="navbtn">☰</button>
+
+  <div class="nav">
+    <h2>To-Do list</h2>
+
+    <div class="list">
+      <a href="login.html"><i class="fa-solid fa-house"></i> Sign-out</a>
+      <a href="saveded.html"><i class="fa-solid fa-bookmark"></i> Saved Tasks</a>
+      <a href="Delete.html"><i class="fa-solid fa-trash"></i> Delete Tasks</a>
+      <a href="User Info.html"><i class="fa-solid fa-user"></i> User Info</a>
+      <a href="T&C.html"><i class="fa-solid fa-circle-info"></i> Terms</a>
+    </div>
+  </div>
+<div class="work">
+
+<button class="open_task">Create Task</button>
+
+<div class="popup_form" style="display:none;">
+    <form>
+        <input id="task_date" type="date" required>
+        <input id="task_time" type="time" required>
+        <input id="task_name" type="text" placeholder="Task name" required>
+        <button type="button" class="submit">Submit</button>
+    </form>
+</div>
+
+<div class="display_tasks"></div>
+
+</div>
+</div>
+<script src="js/script1.js"></script>
+</body>
+</html>
+  

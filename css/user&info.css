@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+    margin: 0;
+}
+
+/* Main container */
+.container {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Title */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+/* Info wrapper */
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Each info box */
+.info-box {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 16px;
+    background: #f9fafb;
+
+    display: flex;
+    align-items: center;
+    justify-content:start;
+
+    min-height: 55px; /* SAME HEIGHT */
+}
+
+/* Label */
+.info-box strong {
+    color: #111827;
+    font-size: 15px;
+}
+
+/* Value */
+.info-box span {
+    color: #374151;
+    font-size: 15px;
+}

@@ -1,0 +1,122 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+body {
+    --tcolor: white;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: "nav saved_tasks";
+    min-height: 100vh;
+}
+
+
+.nav {
+    grid-area: nav;
+    background-color: rgb(26,32,44);
+    color: var(--tcolor);
+    width: 300px;
+    padding-bottom: 30px;
+}
+
+.navbtn {
+    height: 50px;
+    width: 100px;
+    margin: 20px 0 20px 25px;
+    padding: 12px;
+    background-color: rgb(181, 184, 189);
+    border-radius: 10px;
+    font-size: 18px;
+    position: fixed;
+    z-index: 1;
+    transition: box-shadow 0.3s;
+}
+
+.navbtn:hover{
+    box-shadow: 0 0 10px rgba(255, 255, 255);
+}
+.nav h2 {
+    font-size: 30px;
+    margin: 80px 15px 20px;
+    padding: 10px;
+}
+
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list a {
+    font-size: 18px;
+    margin: 8px 15px;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: var(--tcolor);
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.list a:hover{
+    font-size: 20px;
+    text-shadow: 0 0 8px rgba(255, 255, 255);
+}
+
+.saved_tasks {
+    grid-area: saved_tasks;
+    padding: 30px;
+    color: #111827;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+
+    align-items: start;   
+}
+
+
+
+.task_card {
+    background: #ffffff;
+    border-left: 5px solid #6366f1;
+    border-radius: 10px;
+    padding:12px 15px;
+       min-height: 20px;  
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task_card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+.task_card p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #374151;
+}
+
+.task_card strong {
+    color: #111827;
+}
+
+.task_card .status {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 12px;
+    background: #eef2ff;
+    color: #4338ca;
+}

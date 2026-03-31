@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: 'nav work';
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.navbtn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #e5e7eb;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav {
+  background: #1e1e2f;
+  color: white;
+  padding: 20px;
+
+  height: 100%;
+}
+
+.nav h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.nav.closed {
+  transform: translateX(-100%);
+}
+
+.list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+
+.list a:hover{
+    font-size: 20px;
+    text-shadow: 0 0 8px rgba(255, 255, 255);
+}
+
+.work {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  align-items: start;   
+   align-content: start;     
+  grid-auto-rows: min-content
+}
+
+.task_card {
+  background: linear-gradient(135deg, #ffffff, #f9fafb);
+  border-left: 6px solid #6366f1;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: fit-content;
+}
+
+.task_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+.task_card p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #374151;
+}
+
+.task_card strong {
+  color: #111827;
+}
+
+.empty {
+  font-size: 18px;
+  color: #6b7280;
+}
